@@ -20,4 +20,5 @@ RUN a2enmod rewrite &&\
 	echo Zend_extension=/usr/local/ioncube/ioncube_loader_lin_7.3.so > /usr/local/etc/php/conf.d/ioncube.ini &&\
 	rm /tmp/* -rf
 
-RUN wget --user-agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:21.0) Gecko/20100101 Firefox/21.0" https://moguta.ru/get-install-file -O index.php
+RUN wget --user-agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:21.0) Gecko/20100101 Firefox/21.0" https://moguta.ru/get-install-file -O index.php &&\
+	chown www-data:www-data index.php
